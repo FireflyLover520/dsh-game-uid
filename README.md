@@ -115,3 +115,8 @@ dsh plugin --profile <profile> add file:/path/to/dsh-game-uid-<version>.tgz
   旧版用只认 number 的 `n()` 转换后恒为 0，导致按 id 查立绘/素材时全部落空（卡片变纯文字）。
   现存原神 `avatarId`（数字）、星铁 `Number(c.id)`、绝区零 `Number(id)` 三条都取到了值。
 - **0.2.1**：只展示汇总面板，不打分、不列单件词条；支持 `角色` 点名；`exports` 补 `"."`。
+
+## 面板字段（星铁补充）
+
+- `击破特攻` / `能量恢复效率`：mihomo 在角色没堆这两项时不会返回字段，插件按白值 **100%** 补齐，面板不再出现「—」。
+- `伤害加成`：把 `fire_dmg / quantum_dmg / wind_dmg …` 汇总成一行（排除 `crit_dmg`、`break_dmg`），没有元素加成显示 0%。

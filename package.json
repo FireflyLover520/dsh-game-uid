@@ -1,7 +1,7 @@
 {
   "name": "dsh-game-uid",
-  "version": "0.2.4",
-  "description": "练度查询：按 UID 出角色汇总面板（只展示数据、不打分），支持点名只看某个角色（原神/星铁/绝区零）；绝区零为完整面板（含音擎/驱动盘/套装）",
+  "version": "0.2.5",
+  "description": "UID 练度查询：只展示数据、不打分；支持点名；完整面板（含击破/能量/伤害加成）",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
