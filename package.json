@@ -1,7 +1,7 @@
 {
   "name": "dsh-game-uid",
-  "version": "0.2.1",
-  "description": "DSH 插件：按 UID 查原神 / 星铁 / 绝区零的角色练度与汇总面板（只展示数据，不打分；支持点名只看某个角色）",
+  "version": "0.2.2",
+  "description": "练度查询：按 UID 出角色汇总面板（只展示数据、不打分），支持点名只看某个角色（原神/星铁/绝区零）",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
