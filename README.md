@@ -121,3 +121,12 @@ dsh plugin --profile <profile> add file:/path/to/dsh-game-uid-<version>.tgz
 - `击破特攻`：mihomo 在角色没堆这两项时不会返回字段，插件按白值 **100%** 补齐，面板不再出现「—」。
 - `伤害加成`：把 `fire_dmg / quantum_dmg / wind_dmg …` 汇总成一行（排除 `crit_dmg`、`break_dmg`），没有元素加成显示 0%。
 - `能量恢复效率`：mihomo 只返回「超出 100% 的部分」（如 0.3444 = 34.4%），插件补回白值，显示 134.4%；缺失显示 100%。
+
+## 绝区零维护时的兜底（0.2.7）
+
+绝区零只有一个公开源（`enka.network/api/zzz`），官方维护时整站返回 `424 maintenance`，表现就是「刚才还能查，现在查不到了」。
+
+- 每次查询成功会把原始响应写进 `~/.dsh/game-uid-archive/zzz-cache/<uid>.json`
+- 维护期间（424 / 网络不通）自动读 24 小时内的缓存，报告顶部会标「⚠️ （Enka 正在维护，这是 24 小时内缓存的数据）」
+- 超过 24 小时或从没查过 → 仍然如实报「Enka 维护中，过几分钟再试」，不会拿假数据凑
+

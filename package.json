@@ -1,6 +1,6 @@
 {
   "name": "dsh-game-uid",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "UID 练度查询：只展示数据、不打分；支持点名；完整面板（含击破/能量/伤害加成）",
   "type": "module",
   "main": "lib/index.js",
